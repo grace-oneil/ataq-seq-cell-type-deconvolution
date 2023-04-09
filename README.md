@@ -37,7 +37,9 @@ Number of cells to be used in each bulk sample.
 Sample name should be the same as the one used in the above command.
 
 # References
+### Model
 Menden, K., M. Marouf, S. Oller, A. Dalmia, D.S. Magruder, K. Kloiber, P. Heutink, and S. Bonn. 2020. Deep learning-based cell composition analysis from tissue expression profiles. Sci Adv. 6:eaba2619. 
 https://github.com/KevinMenden/scaden
 
+### Data
 Zhang, K., J.D. Hocker, M. Miller, X. Hou, J. Chiou, O.B. Poirion, Y. Qiu, Y.E. Li, K.J. Gaulton, A. Wang, S. Preissl, and B. Ren. 2021. A single-cell atlas of chromatin accessibility in the human genome. Cell. 184:5985-6001 e5919. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184462
