@@ -2,7 +2,7 @@
 Cell type deconvolution of ATAQ-seq data using the Scaden model from Menden et al.
 
 ## Process raw scATAQ-seq data for use with Scaden model
-`./process_ataq_data_for_scaden <raw_data_filename> <genome_filename> <metadata_filename> <sample_name> <cell_types_filename> <num_samples_training> <num_samples_prediction> <num_cells_per_sample>`
+`./process_ataq_data_for_scaden <raw_data_filename> <genome_filename> <metadata_filename> <sample_name> <cell_types_filename> <num_samples_training> <num_samples_prediction> <num_cells_per_sample> <chr_of_interest>`
 
 ### Arguments
 `<raw_data_filename>`
@@ -28,6 +28,9 @@ Number of bulk samples to be generated for prediction with the Scaden model.
 
 `<num_cells_per_sample>`
 Number of cells to be used in each bulk sample.
+
+`<chr_of_interest>`
+OPTIONAL. Specific chromosomes of interest. Formatted with '_' between chromosome names (e.g. 'chr1_chr5').
 
 ## Train, predict, and evaluate Scaden model with ATAQ-seq data
 `./ataq_scaden <sample_name>`
