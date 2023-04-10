@@ -36,9 +36,6 @@ OPTIONAL. Specific chromosomes of interest. Formatted with '_' between chromosom
 `<sample-name>`
 Sample name should be the same as the one used in the above command.
 
-## Note
-Make sure to put all the output files from these scripts into a separate folder when trying to rerun the scripts with a new sample (to avoid any naming conflicts). This will be fixed in the future.
-
 # References
 ### Model
 Menden, K., M. Marouf, S. Oller, A. Dalmia, D.S. Magruder, K. Kloiber, P. Heutink, and S. Bonn. 2020. Deep learning-based cell composition analysis from tissue expression profiles. Sci Adv. 6:eaba2619. 
