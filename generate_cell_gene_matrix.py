@@ -11,16 +11,17 @@ import scanpy as sc
 
 sample_name = ''.join(sys.argv[1])
 cell_type = ''.join(sys.argv[2])
-chromosomes_of_interest = ','.join(sys.argv[3:])
+genome_filename = ''.join(sys.argv[3])
+chromosomes_of_interest = ','.join(sys.argv[4:])
 chromosomes_of_interest = chromosomes_of_interest.split(",")
 if chromosomes_of_interest == "":
-	chromosomes_of_interest = ["chr1", "chr2", "chr3", "chr4", "chr5", "chr6", "chr7", "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14", "chr15", "chr16", "chr17", "chr18", "chr19", "chr20", "chr21", "chr22", "chrX", "chrY"]
+        chromosomes_of_interest = ["chr1", "chr2", "chr3", "chr4", "chr5", "chr6", "chr7", "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14", "chr15", "chr16", "chr17", "chr18", "chr19", "chr20", "chr21", "chr22", "chrX", "chrY"]
 #print("Sample Name: " + sample_name)
 #print("Cell Type: " + cell_type)
 #print("Chromosomes of Interest: " + str(chromosomes_of_interest))
 
 print("Reading files")
-genome = pd.read_csv("grch38.bed", sep="\t", header=None)
+genome = pd.read_csv(genome_filename, sep="\t", header=None)
 g_header = ["g_chrom", "g_start", "g_end", "gene_name"]
 genome.columns = g_header
 chr_genome = genome[genome["g_chrom"].isin(chromosomes_of_interest)]
