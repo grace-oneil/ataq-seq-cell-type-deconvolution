@@ -1,16 +1,13 @@
 #!/bin/bash
 
-TRAINING_FILE="$1_training_data.h5ad"
-PREDICTION_FILE="$1_prediction_data.txt"
-
 echo "-----Processing with Scaden-----"
-scaden process $TRAINING_FILE $PREDICTION_FILE
+scaden process "$1_training_data.h5ad" "$1_prediction_data.txt"
 
 echo "-----Training with Scaden-----"
-scaden train processed.h5ad --steps 5000 --model_dir model
+scaden train processed.h5ad --steps 5000 --model_dir "$1_model"
 
 echo "-----Prediction with Scaden-----"
-scaden predict --model_dir model $PREDICTION_FILE
+scaden predict --model_dir "$1_model" "$1_prediction_data.txt"
 
 echo "-----Evaluating Scaden predictions-----"
 python3 evaluate_predictions.py $1
