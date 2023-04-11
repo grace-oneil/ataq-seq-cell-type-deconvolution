@@ -29,7 +29,7 @@ Number of cells to be used in each bulk sample.
 `<chr-of-interest>`
 OPTIONAL. Specific chromosomes of interest. Formatted with '_' between chromosome names (e.g. 'chr1_chr5'). If interested in all chromosomes, leave this argument empty.
 
-This script takes approximately one hour to run, dependent on the size of the raw ATAQ-seq data.
+This script takes approximately two hours to run, dependent on the size of the raw ATAQ-seq data, and the number of chromosomes of interest.
 
 ## Train, predict, and evaluate Scaden model with ATAQ-seq data
 `./ataq_scaden <sample-name>`
