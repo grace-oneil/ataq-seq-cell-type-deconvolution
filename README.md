@@ -38,7 +38,7 @@ This script takes approximately one hour to run, dependent on the size of the ra
 `<sample-name>`
 Sample name should be the same as the one used in the above command.
 
-This script takes approximately 15 minutes to run, dependent on samples sizes and number of cells per sample.
+This script takes approximately 10 minutes to run, dependent on samples sizes and number of cells per sample.
 
 # References
 ### Model
