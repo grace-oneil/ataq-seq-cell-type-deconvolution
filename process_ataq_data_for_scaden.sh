@@ -20,6 +20,7 @@ echo "-----Generating cell type data for sample-----"
 
 echo "-----Generating cell gene matrices-----"
 ./generate_all_cell_gene_matrices.sh $4 "$4_cell_type_names.csv" $2 $8 2> err.txt
+
 echo "-----Preprocessing cell gene matrices-----"
 python3 preprocess_cell_gene_matrix.py "$4_cell_type_names.csv" $2 $4 $8 2> err.txt
 

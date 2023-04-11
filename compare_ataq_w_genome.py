@@ -43,7 +43,12 @@ df_genome.to_csv('genome_bedtools.bed', sep = '\t', index=False, header=False)
 
 print("---------Comparing ATAQ data to genome data---------")
 f = ataq_filename.split("/")
-f = f[-1]
+if len(f) >= 3:
+	f = f[2]
+elif len(f) == 1:
+	f = f[0]
+else:
+	f = f[1]
 #f = ataq_filename
 os.system("mkdir genome_comparison_files")
 new_filename = "./genome_comparison_files/"+f+".bed"
