@@ -9,33 +9,41 @@ Cell type deconvolution of ATAQ-seq data using the Scaden model from Menden et a
 
 Raw ATAQ-seq data file for a single sample (e.g. 'GSE184462_RAW/GSM5589344_adipose_omentum_SM-ADYHB_rep1_fragments.bed.gz').
 
+
 `<genome-filename>` 
 
 Genome reference file. The genome reference used here is GRCh38 (e.g. 'ucsc_genome_data.bed'). If using the genome reference file provided in this repository, make sure to unzip it before running the scripts.
+
 
 `<metadata-filename>`
 
 Metadata file with single cell names and the corresponding sample they are taken from and the cell type they are labeled as (e.g. 'metadata.csv'). If using the metadata file provided in this repository, make sure to unzip it before running the scripts.
 
+
 `<sample-name>` 
 
 Name of the sample to be processed (e.g. 'adipose_omentum_SM-ADYHB').
+
 
 `<num-samples-training>` 
 
 Number of bulk samples to be generated for training the Scaden model.
 
+
 `<num-samples-prediction>` 
 
 Number of bulk samples to be generated for prediction with the Scaden model.
+
 
 `<num-cells-per-sample>`
 
 Number of cells to be used in each bulk sample.
 
+
 `<chr-of-interest>`
 
 OPTIONAL. Specific chromosomes of interest. Formatted with '_' between chromosome names (e.g. 'chr1_chr5'). If interested in all chromosomes, leave this argument empty.
+
 
 This script takes several hours to run, dependent on the size of the raw ATAQ-seq data, number of cell types in the tissue sample, and the number of chromosomes of interest. Updating these scripts to reduce the number of reads and writes would likely improve the efficiency dramatically.
 
@@ -46,6 +54,7 @@ This script takes several hours to run, dependent on the size of the raw ATAQ-se
 `<sample-name>`
 
 Sample name should be the same as the one used in the above command.
+
 
 This script takes approximately 10 minutes to run, dependent on samples sizes and number of cells per sample.
 
