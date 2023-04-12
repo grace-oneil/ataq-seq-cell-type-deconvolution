@@ -4,8 +4,9 @@ import sys
 import collections
 
 sample_name = ''.join(sys.argv[1])
+metadata_file = ''.join(sys.argv[2])
 
-df = pd.read_csv("metadata.csv", sep=',')
+df = pd.read_csv(metadata_file, sep=',')
 df.drop(["1","2","3","4"], axis=1, inplace=True)
 df = df[df["sample"]==sample_name]
 cell_types = [t.replace(' ','') for t in df["cell_type"].unique().tolist()]
