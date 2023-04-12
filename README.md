@@ -9,10 +9,10 @@ Cell type deconvolution of ATAQ-seq data using the Scaden model from Menden et a
 Raw ATAQ-seq data file for a single sample (e.g. 'GSE184462_RAW/GSM5589344_adipose_omentum_SM-ADYHB_rep1_fragments.bed.gz').
 
 `<genome-filename>` 
-Genome reference file. The genome reference used here is GRCh38 (e.g. 'ucsc_genome_data.bed').
+Genome reference file. The genome reference used here is GRCh38 (e.g. 'ucsc_genome_data.bed'). If using the genome reference file provided in this repository, make sure to unzip it before running the scripts.
 
 `<metadata-filename>`
-Metadata file with single cell names and the corresponding sample they are taken from and the cell type they are labeled as (e.g. 'metadata.csv').
+Metadata file with single cell names and the corresponding sample they are taken from and the cell type they are labeled as (e.g. 'metadata.csv'). If using the metadata file provided in this repository, make sure to unzip it before running the scripts.
 
 `<sample-name>` 
 Name of the sample to be processed (e.g. 'adipose_omentum_SM-ADYHB').
