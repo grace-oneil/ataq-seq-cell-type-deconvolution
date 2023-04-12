@@ -10,7 +10,7 @@
 #8: chromosomes_of_interest
 
 echo "-----Creating cell type name file-----"
-python3 generate_cell_type_names.py $4
+python3 generate_cell_type_names.py $4 $3
 
 echo "-----Comparing ATAQ data to genome-----"
 python3 compare_ataq_w_genome.py $1 $2 $8 2> err.txt
